@@ -90,12 +90,6 @@ export default {
           this.setMessage(`공격실패.. ${Monster.Att}의 데미지를 입었다..`);
           console.log("짐");
         }
-        setTimeout(() => {
-          battleMenu.style.display = "block";
-        }, 500);
-
-        this.renderGame();
-
         if (Hero.Hp <= 0) {
           console.log("사망");
           countMessage.innerHTML = `당신이 잡은 몬스터의 수: ${counter}`;
@@ -122,8 +116,17 @@ export default {
           monsterStatus.innerHTML = ``;
           setTimeout(() => {
             this.summonMonster();
+            setTimeout(() => {
+              battleMenu.style.display = "block";
+            });
           }, 1000);
+        } else {
+          setTimeout(() => {
+            battleMenu.style.display = "block";
+          }, 500);
         }
+
+        this.renderGame();
       }, 500);
     }, 500);
   },
