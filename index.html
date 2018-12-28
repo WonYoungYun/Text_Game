@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>RPG</title>
+  </head>
+  <body>
+      <header>
+            <h1 id="title"><a href="./index.html">Kill Monster</a></h2>
+      </header>
+    <div id="wrap">
+      
+      <div id="screen">
+        <div id="user">
+          <form action="" ><input type="text" autocomplete="off" placeholder="이름을 입력하세요." maxlength="8" />
+            <button>입력</button></form>
+        </div>
+        <div id="game_play">
+
+            <div id="monster">
+                </div>
+          <div id="message"></div>
+          <div id="hero">
+            </div>  
+        </div>
+        <div id="game_menu"><button class="start_button" >Game Start</button>
+        </div>
+        <div id="continue_menu">
+          <h3 class="count_message">당신이 잡은수</h3>
+          <button class="restart_button" >Restart?</button>
+        </div>
+      </div>
+
+      <div id="battle_menu">
+          <ul id="hero_action">
+              <li class="1">공격</li>
+              <li class="2">전투기술</li>
+              <li class="3">발차기</li>
+          </ul>
+      </div>
+    </div>
+    <script type="module" src="./js/App.js"></script>
+  </body>
+</html>
