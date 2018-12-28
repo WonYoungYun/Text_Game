@@ -19,6 +19,18 @@ const Monsters = [
     Hp: 24,
     Att: 8,
     Action: ""
+  },
+  {
+    name: "웨어울프",
+    Hp: 36,
+    Att: 16,
+    Action: ""
+  },
+  {
+    name: "하피",
+    Hp: 32,
+    Att: 12,
+    Action: ""
   }
 ];
 
