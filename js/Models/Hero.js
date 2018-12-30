@@ -14,6 +14,9 @@ Hero.setup = function(name) {
 };
 Hero.damagedAttack = function(att) {
   this.Hp -= att;
+  if (this.Hp < 0) {
+    this.Hp = 0;
+  }
   return this;
 };
 Hero.win = function() {

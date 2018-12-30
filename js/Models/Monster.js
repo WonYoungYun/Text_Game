@@ -63,11 +63,11 @@ Monster.upgrade = function() {
 
 Monster.doAction = function(number) {
   if (number === 1) {
-    return "공격";
+    return "공격(가위)";
   } else if (number === 2) {
-    return "전투기술";
+    return "전투기술(바위)";
   } else {
-    return "발차기";
+    return "발차기(보)";
   }
 };
 Monster.createMonster = function() {
@@ -79,6 +79,9 @@ Monster.randomStatus = function() {
 };
 Monster.damagedAttack = function(att) {
   this.Hp -= att;
+  if (this.Hp < 0) {
+    this.Hp = 0;
+  }
   this.Action = Math.floor(Math.random() * 3) + 1;
   return this;
 };

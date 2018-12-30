@@ -70,7 +70,7 @@ export default {
     });
   },
   attack(number) {
-    const win = Math.abs(number - Monster.Action);
+    const win = number - Monster.Action;
     const monsterAction = Monster.doAction(Monster.Action);
     battleMenu.style.display = "none";
     setTimeout(() => {
@@ -84,11 +84,19 @@ export default {
         } else if (win === 1) {
           Monster.damagedAttack(Hero.Att);
           this.setMessage(`공격성공! ${Hero.Att}의 데미지를 입혔다!`);
-          console.log("이김");
+          console.log("이김", win);
+        } else if (win === -2) {
+          Monster.damagedAttack(Hero.Att);
+          this.setMessage(`공격성공! ${Hero.Att}의 데미지를 입혔다!`);
+          console.log("이김", win);
         } else if (win === 2) {
           Hero.damagedAttack(Monster.Att);
           this.setMessage(`공격실패.. ${Monster.Att}의 데미지를 입었다..`);
-          console.log("짐");
+          console.log("짐", win);
+        } else if (win === -1) {
+          Hero.damagedAttack(Monster.Att);
+          this.setMessage(`공격실패.. ${Monster.Att}의 데미지를 입었다..`);
+          console.log("짐", win);
         }
         if (Hero.Hp <= 0) {
           console.log("사망");
